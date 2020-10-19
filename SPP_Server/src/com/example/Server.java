@@ -34,8 +34,6 @@ import java.util.Date;
 public class Server{
 
     public static void main(String[] args){
-
-
         log("Local Bluetooth device...\n");
 
         LocalDevice local = null;
@@ -43,7 +41,7 @@ public class Server{
 
             local = LocalDevice.getLocalDevice();
         } catch (BluetoothStateException e2) {
-
+            log(e2.getMessage());
         }
 
         log( "address: " + local.getBluetoothAddress() );
